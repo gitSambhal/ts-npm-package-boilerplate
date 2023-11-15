@@ -1,4 +1,8 @@
-export { Uuid } from './helpers/uuid';
-import uuid from './helpers/uuid';
-
-export default uuid;
+/**
+ * Check if the given number is even
+ * @param num number
+ * @returns boolean
+ */
+export const isEven = (num: number): boolean => {
+  return num % 2 === 0;
+};

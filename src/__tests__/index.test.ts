@@ -1,13 +1,13 @@
-import uuid from '../index';
+import { isEven } from '../index';
 
-describe('valid UUID', () => {
-  let VALID_UUID_REGEX: RegExp;
-
-  beforeAll(() => {
-    VALID_UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
+describe('valid Even', () => {
+  test('should be true', () => {
+    expect(isEven(2)).toBeTruthy();
   });
+});
 
-  test('should match a valid UUID', () => {
-    expect(VALID_UUID_REGEX.test(uuid.v4())).toBeTruthy();
+describe('invalid Even', () => {
+  test('should be false', () => {
+    expect(isEven(3)).toBeFalsy();
   });
 });
